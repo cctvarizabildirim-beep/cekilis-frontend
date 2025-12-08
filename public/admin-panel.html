@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-layout">
+    <aside class="admin-sidebar">
+        <h2>Çekilişler</h2>
+        <ul id="drawList"></ul>
+        <button id="logoutBtn" class="logout-btn">Çıkış</button>
+    </aside>
+
+    <main class="admin-main">
+        <div id="drawInfo" class="draw-info">
+            <h1 id="drawTitle">Bir çekiliş seçin</h1>
+            <p id="drawPrice"></p>
+        </div>
+
+        <div class="numbers-panel">
+            <div class="numbers-header">
+                <h3>Numara Yönetimi (1–90)</h3>
+                <div class="bulk-actions">
+                    <button id="lockSelectedBtn">Seçilenleri Kilitle</button>
+                    <button id="unlockSelectedBtn">Seçilenleri Serbest Bırak</button>
+                </div>
+            </div>
+
+            <div id="numbersGrid" class="numbers-grid"></div>
+
+            <div id="numberDetail" class="number-detail">
+                <h4>Seçili Numara Detayı</h4>
+                <p>Numara: <span id="detailNumber">—</span></p>
+                <p>Durum: <span id="detailStatus">—</span></p>
+                <label>Not:</label>
+                <textarea id="detailNote" rows="3"></textarea>
+                <button id="saveNoteBtn">Notu Kaydet</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

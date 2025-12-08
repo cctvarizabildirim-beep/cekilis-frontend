@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Çekiliş</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Başlık -->
+    <h1 id="draw-title"></h1>
+
+    <!-- ✅ Numara Grid -->
+    <div id="number-grid"></div>
+
+    <!-- ✅ Seçim Özeti -->
+    <div class="summary">
+        <p>Seçilen Numara(lar): <span id="selected"></span></p>
+        <p>Toplam Tutar: <span id="total">0</span> TL</p>
+    </div>
+
+    <!-- ✅ Katıl Butonu -->
+    <button id="joinBtn">Çekilişe Katıl</button>
+
+    <!-- ✅ Form Modal -->
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <h3>Katılım Formu</h3>
+
+            <input id="name" placeholder="İsim Soyisim">
+            <input id="phone" placeholder="Telefon">
+
+            <button id="sendBtn">Gönder</button>
+        </div>
+    </div>
+
+    <!-- ✅ JS -->
+    <script src="js/cekilis.js"></script>
+
+</body>
+</html>

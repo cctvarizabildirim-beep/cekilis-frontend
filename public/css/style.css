@@ -1,0 +1,421 @@
+/* ---------------------------------------------------
+   GENEL TEMA – YILBAŞI PREMIUM TASARIM
+--------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1E293B 0%, #020617 55%, #000 100%);
+    color: #F5F5F5;
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------------------
+   BAŞLIK
+--------------------------------------------------- */
+
+.header {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.4rem;
+    color: #FBC02D;
+    text-shadow: 0 0 12px rgba(251, 192, 45, 0.6);
+}
+
+/* ---------------------------------------------------
+   COUNTDOWN
+--------------------------------------------------- */
+
+.countdown {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FBC02D;
+    text-shadow: 0 0 10px rgba(251, 192, 45, 0.5);
+}
+
+/* ---------------------------------------------------
+   ÇEKİLİŞ KARTLARI
+--------------------------------------------------- */
+
+.draw-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.draw-card {
+    background: radial-gradient(circle at top, rgba(248, 250, 252, 0.05), rgba(15, 23, 42, 0.95));
+    border-radius: 16px;
+    padding: 20px;
+    color: #F5F5F5;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid rgba(251, 192, 45, 0.25);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+    transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+}
+
+.draw-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+    border-color: rgba(251, 192, 45, 0.8);
+}
+
+.draw-card.special {
+    border-color: rgba(229, 57, 53, 0.9);
+    box-shadow: 0 22px 45px rgba(229, 57, 53, 0.5);
+
+    /* ✅ 500 TL kartını ortaya al */
+    grid-column: 1 / -1;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------
+   BİLGİLENDİRME BUTONU
+--------------------------------------------------- */
+
+.info-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #E53935, #FBC02D);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(229, 57, 53, 0.4);
+}
+
+/* ---------------------------------------------------
+   CANLI YAYIN ALANI (GÜNCELLENDİ)
+--------------------------------------------------- */
+
+.live-box {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 16px;
+    border: 1px solid rgba(251, 192, 45, 0.3);
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.live-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #E53935;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+    box-shadow: 0 10px 25px rgba(229, 57, 53, 0.4);
+}
+
+.live-button:hover {
+    background: #c71c2b;
+}
+
+.live-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #B0BEC5;
+}
+
+/* ---------------------------------------------------
+   KURALLAR & HEDİYELER – ORTALANMIŞ PREMIUM TASARIM
+--------------------------------------------------- */
+
+.info-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.info-section {
+    background: rgba(15, 23, 42, 0.85);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 192, 45, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+}
+
+.info-section h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #FBC02D;
+    text-shadow: 0 0 10px rgba(251, 192, 45, 0.5);
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-section ul li {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #E2E8F0;
+}
+
+/* ---------------------------------------------------
+   ÇEKİLİŞ SAYFASI – NUMARA GRID
+--------------------------------------------------- */
+
+#draw-title {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #FBC02D;
+}
+
+#number-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.number-item {
+    padding: 12px;
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid rgba(251, 192, 45, 0.4);
+    transition: 0.2s;
+}
+
+.number-item:hover {
+    background: rgba(251, 192, 45, 0.2);
+}
+
+.number-item.locked {
+    background: #374151;
+    border-color: #4B5563;
+    color: #9CA3AF;
+    cursor: not-allowed;
+}
+
+.number-item.selected {
+    background: linear-gradient(135deg, #E53935, #FBC02D);
+    color: white;
+    border-color: rgba(251, 192, 45, 0.9);
+}
+
+/* ---------------------------------------------------
+   SEÇİM ÖZETİ
+--------------------------------------------------- */
+
+.summary {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+#total {
+    color: #FBC02D;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------
+   ÇEKİLİŞE KATIL BUTONU
+--------------------------------------------------- */
+
+#joinBtn {
+    display: block;
+    margin: 25px auto;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, #22C55E, #16A34A);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 12px 25px rgba(22, 163, 74, 0.4);
+}
+
+/* ---------------------------------------------------
+   FORM MODAL
+--------------------------------------------------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 25px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid rgba(251, 192, 45, 0.3);
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #4B5563;
+    background: #020617;
+    color: #F5F5F5;
+}
+
+#sendBtn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #0EA5E9, #2563EB);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   ✅ ÇEKİLİŞ ANİMASYONU (ball + number)
+--------------------------------------------------- */
+
+.draw-animation {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ball {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FBC02D, #E53935);
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(251, 192, 45, 0.7);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.draw-number {
+    font-size: 3rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #FBC02D;
+    text-shadow: 0 0 15px rgba(251, 192, 45, 0.7);
+}
+
+/* ---------------------------------------------------
+   ✅ KONFETİ
+--------------------------------------------------- */
+
+#confettiCanvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* ---------------------------------------------------
+   ✅ PATLAMA ANİMASYONU
+--------------------------------------------------- */
+
+.burst {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9000;
+    pointer-events: none;
+}
+
+.burst-circle {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #FBC02D, #E53935);
+    border-radius: 50%;
+    animation: burstAnim 0.8s ease-out forwards;
+}
+
+@keyframes burstAnim {
+    0% { transform: scale(0.2); opacity: 1; }
+    100% { transform: scale(8); opacity: 0; }
+}
+
+/* ---------------------------------------------------
+   ✅ KAZANAN EKRANI
+--------------------------------------------------- */
+
+.winner-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9500;
+}
+
+.winner-box {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 40px 60px;
+    border-radius: 20px;
+    border: 2px solid rgba(251, 192, 45, 0.6);
+    text-align: center;
+    box-shadow: 0 0 40px rgba(251, 192, 45, 0.4);
+    animation: winnerPop 0.6s ease-out;
+}
+
+#winnerNumber {
+    font-size: 4rem;
+    color: #FBC02D;
+    text-shadow: 0 0 20px rgba(251, 192, 45, 0.8);
+}
+
+@keyframes winnerPop {
+    0% { transform: scale(0.4); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* ---------------------------------------------------
+   GİZLEME SINIFI
+--------------------------------------------------- */
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Canlı Çekiliş Yayını</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+        video { width: 100%; max-width: 500px; border-radius: 10px; background: #000; }
+        #status { margin-top: 10px; font-size: 18px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <h2>🎥 Canlı Çekiliş Yayını</h2>
+
+    <video id="liveVideo" autoplay playsinline></video>
+    <div id="status">Yayın bekleniyor...</div>
+
+    <!-- ✅ Çekiliş Animasyonu -->
+    <div id="drawAnimation" class="draw-animation hidden">
+        <div class="ball"></div>
+        <div id="drawNumber" class="draw-number"></div>
+    </div>
+
+    <!-- ✅ Konfeti -->
+    <canvas id="confettiCanvas" class="hidden"></canvas>
+
+    <!-- ✅ Patlama Efekti -->
+    <div id="burst" class="burst hidden">
+        <div class="burst-circle"></div>
+    </div>
+
+    <!-- ✅ Kazanan Ekranı -->
+    <div id="winnerScreen" class="winner-screen hidden">
+        <div class="winner-box">
+            <h1 id="winnerNumber"></h1>
+            <p>🎉 Kazanan Numara 🎉</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="js/live.js"></script>
+
+</body>
+</html>

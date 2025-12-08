@@ -1,0 +1,12 @@
+{
+  "name": "cekilis-frontend",
+  "version": "1.0.0",
+  "description": "Yılbaşı çekiliş sistemi frontend",
+  "private": true,
+  "scripts": {
+    "start": "npx serve public",
+    "dev": "npx serve public -l 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

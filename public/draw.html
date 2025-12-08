@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çekiliş - Numara Seç</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        #number-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .number-item {
+            padding: 12px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .number-item:hover {
+            background: #dcdcdc;
+        }
+
+        .number-item.locked {
+            background: #999;
+            color: white;
+            cursor: not-allowed;
+        }
+
+        .number-item.selected {
+            background: #007bff;
+            color: white;
+        }
+
+        #continue-btn {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+
+        #continue-btn:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Çekiliş - <span id="price"></span></h1>
+
+        <div id="number-grid"></div>
+
+        <button id="continue-btn" disabled>Devam Et</button>
+    </div>
+
+    <!-- ✅ DOĞRU PATH -->
+    <script src="js/public-draw-v3.js"></script>
+</body>
+</html>
